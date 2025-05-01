@@ -997,7 +997,7 @@ function updateHistogram() {
     // Custom map upload
     document.getElementById('customMap')?.addEventListener('click', () => {
         // Show alert message
-        alert('Please contact Irislab to enable the Custom Map feature.');
+        alert('Custom Maps requires making a new version for you. Please get in touch with us here');
 
         // Open the Irislab contact page in a new tab
         window.open('https://www.irislab.com/pages/contact-us-v1', '_blank');
