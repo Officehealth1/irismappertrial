@@ -2,7 +2,8 @@
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="1200px" height="900px" viewBox="0 0 1200 900" enable-background="new 0 0 1200 900" xml:space="preserve">
+	 width="1200px" height="900px" viewBox="0 0 841.9 595.3" enable-background="new 0 0 1200 900" xml:space="preserve">
+<g transform="translate(-281.89 -229.48) scale(1.1714)">
 <path fill="none" stroke="#231F20" d="M738.85,287.708l32.092,5.303c-16.928,22.439-29.525,9.055-29.525,9.055
 	c-12.598-11.022,8.661-29.919,8.661-29.919"/>
 <text transform="matrix(0.9977 0 0 1 588.1528 167.9028)" fill="#231F20" font-family="'Arial-BoldMT'" font-size="14.0851">12</text>
@@ -223,4 +224,5 @@
 <text transform="matrix(1 0 0 1 585.0718 464.9102)" font-family="'MyriadPro-Regular'" font-size="60">D</text>
 <text transform="matrix(1 0 0 1 477.8643 545.8838)" font-family="'MyriadPro-Regular'" font-size="12">DUODENUM</text>
 <text transform="matrix(0.904 0 0 1 565.1548 565.1367)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="10.1157">SUR-</tspan><tspan x="0" y="12.139" font-family="'MyriadPro-Regular'" font-size="10.1157">RENALE</tspan></text>
+</g>
 </svg>
