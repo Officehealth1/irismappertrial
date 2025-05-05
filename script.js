@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const addImageBtn = document.getElementById('addImageBtn');
     const availableMaps = [
         'Angerer_Map_DE_V1',
-        'Bourdil_Map_FR_V1',
+        'Bourdiol_Map_FR_V1',
         'IrisLAB_Map_EN_V2',
         'IrisLAB_Map_FR_V2',
         'Jaussas_Map_FR_V1',
@@ -166,7 +166,7 @@ function findPercentilePoint(cdf, percentile) {
     }
     
     // Map Tracking
-    let currentMap = availableMaps[0]; // Initialize with the default map
+    let currentMap = 'IrisLAB_Map_EN_V2'; // Initialize with the desired default map
     let customSvgContent = ''; // To store custom SVG content
 
     function initializeEyeSettings() {
@@ -975,13 +975,30 @@ function updateHistogram() {
         mapModal.style.display = 'block';
         mapOptions.innerHTML = '';
 
+        // Helper function to format map names
+        function formatMapName(mapFileName) {
+            const parts = mapFileName.split('_');
+            const mapName = parts[0] + (parts[1] === 'Map' ? ' Map' : ''); // e.g., "Angerer Map", "IrisLAB Map"
+            const langCode = parts.find(p => p === 'DE' || p === 'EN' || p === 'FR');
+            let language = '';
+            switch (langCode) {
+                case 'DE': language = 'German'; break;
+                case 'EN': language = 'English'; break;
+                case 'FR': language = 'French'; break;
+                default: language = 'Unknown'; // Fallback
+            }
+            return `(${language}) ${mapName}`;
+        }
+
         // Populate map options as a simple list
         availableMaps.forEach(map => {
             const option = document.createElement('div');
             option.className = 'map-option';
-            option.innerHTML = `<span>${map}</span>`;
+            const displayName = formatMapName(map); // Format the name
+            option.innerHTML = `<span>${displayName}</span>`; // Use the formatted name
+            option.dataset.mapFile = map; // Store original filename if needed later
             option.onclick = function() {
-                currentMap = map;
+                currentMap = map; // Use the original filename when setting currentMap
                 if (isDualViewActive) {
                     loadSVG(currentMap, 'L');
                     loadSVG(currentMap, 'R');
@@ -997,7 +1014,7 @@ function updateHistogram() {
     // Custom map upload
     document.getElementById('customMap')?.addEventListener('click', () => {
         // Show alert message
-        alert('Custom Maps requires making a new version for you. Please get in touch with us here');
+        alert('Please contact Irislab to enable the Custom Map feature.');
 
         // Open the Irislab contact page in a new tab
         window.open('https://www.irislab.com/pages/contact-us-v1', '_blank');
